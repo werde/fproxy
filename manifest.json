@@ -1,0 +1,24 @@
+{
+"manifest_version": 2,
+"name": "fSocks",
+"version": "0.1",
+"description": "fSocks!",
+
+"icons": {
+    "48": "icons/icon.svg"
+},
+
+"browser_action": {
+    "default_icon": "icons/icon.svg",
+    "default_title": "fSocks",
+    "default_popup": "popup/popup.html",
+    "browser_style": true
+},
+
+"content_scripts": [
+    {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["fSocks.js"]
+    }
+]
+}
